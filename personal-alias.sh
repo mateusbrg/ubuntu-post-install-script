@@ -1,6 +1,7 @@
+# copy and paste into ~/.bashrc and ~/.zshrc
+
 # shell commands
 alias cls='clear' 
-
 
 # git commands
 alias gtst='git status'
@@ -14,3 +15,5 @@ alias gtm='git merge'
 alias gtpush='git push'
 alias gtpull='git pull'
 alias gtf='git fetch'
+
+# after paste, run source ~/.bashrc && source ~/.zshrc
