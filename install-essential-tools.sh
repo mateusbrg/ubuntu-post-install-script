@@ -3,7 +3,7 @@
 # ----------------------------
 # Script de setup inicial para distros baseadas em Ubuntu
 #
-# aplicado em um Ubuntu 22.04 - dez/2024 
+# aplicado em um Ubuntu 22.04 - dez/2024
 # ----------------------------
 
 # Atualização do sistema
@@ -33,10 +33,11 @@ install_essentials() {
         ffmpeg
 }
 
-# Instalação do Docker
+# Instalação do Docker (https://docs.docker.com/engine/install/ubuntu/)
 install_docker() {
     echo "🐳 Instalando Docker..."
     curl -fsSL https://get.docker.com | sh
+    sudo groupadd docker
     sudo usermod -aG docker $USER
 }
 
@@ -67,8 +68,9 @@ install_ohmyzsh() {
 # Instalação de Node.js (via nvm)
 install_node() {
     echo "🌐 Instalando Node.js via nvm..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
     source ~/.bashrc
+    source ~/.zshrc
     nvm install --lts
 }
 
