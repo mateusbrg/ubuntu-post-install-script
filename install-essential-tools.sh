@@ -33,6 +33,13 @@ install_essentials() {
         ffmpeg
 }
 
+install_gnome_features() {
+    echo "📦 Instalando pacotes para o GNOME..."
+    sudo apt install -y \
+        build-gnome-tweaks \
+        chrome-gnome-shell
+}
+
 # Instalação do Docker (https://docs.docker.com/engine/install/ubuntu/)
 install_docker() {
     echo "🐳 Instalando Docker..."
@@ -82,6 +89,7 @@ echo "🚀 Iniciando o setup inicial..."
 
 update_system
 install_essentials
+install_gnome_features
 install_docker
 install_docker_compose
 setup_git
