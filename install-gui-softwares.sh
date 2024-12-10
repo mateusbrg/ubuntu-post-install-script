@@ -14,6 +14,19 @@ install_google_chrome() {
     rm google-chrome-stable_current_amd64.deb
 }
 
+# Instalação do Discord
+install_discord() {
+    echo "💬 Instalando Discord..."
+
+    wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+    sudo apt install -y ./discord.deb
+    rm discord.deb
+
+    echo "✅ Discord instalado com sucesso!"
+}
+
+
+
 # Instalação do VSCode
 install_vscode() {
     echo "💻 Instalando Visual Studio Code..."
@@ -36,5 +49,6 @@ echo "🚀 Iniciando o setup inicial..."
 
 install_google_chrome
 install_vscode
+install_discord
 
 echo "✅ Setup concluído! Reinicie a máquina para aplicar todas as alterações."
