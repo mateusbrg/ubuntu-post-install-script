@@ -12,6 +12,11 @@ update_system() {
     sudo apt update && sudo apt upgrade -y
 }
 
+add_repository_universe() {
+    echo "📦 Adicionando repositório universe"
+    sudo add-apt-repository universe
+}
+
 # Instalação de pacotes essenciais
 install_essentials() {
     echo "📦 Instalando pacotes essenciais..."
@@ -24,11 +29,13 @@ install_essentials() {
         htop \
         net-tools \
         zsh \
+        neofetch \ 
         unzip \
         gnupg \
         software-properties-common \
         gparted \
         ttf-mscorefonts-installer \
+        fonts-firacode \
         vlc \
         ffmpeg
 }
@@ -88,6 +95,7 @@ install_node() {
 echo "🚀 Iniciando o setup inicial..."
 
 update_system
+add_repository_universe
 install_essentials
 install_gnome_features
 install_docker
