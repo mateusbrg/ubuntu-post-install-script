@@ -32,7 +32,6 @@ install_essentials() {
         neofetch \ 
         unzip \
         gnupg \
-        software-properties-common \
         gparted \
         ttf-mscorefonts-installer \
         fonts-firacode \
